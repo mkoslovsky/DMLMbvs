@@ -20,7 +20,7 @@ library(DMLMbvs)
 This document contains a tutorial for the R package DMLMbvs, as described in *A Bayesian model of microbiome data for simultaneous identification of covariate associations and prediction of phenotypic outcomes,* by M.D. Koslovsky, K. Hoffman, C. Daniel-MacDougall, and M. Vannucci. The code below can be used to replicate the simulation study and sensitivity analysis presented in the main manuscript. 
 
 # Simulate Data
-Having installed and loaded the `DMLMbvs` package into the R environment, generate a simulated data set using the `simulate_DMLM()` function. 
+Having installed and loaded the `DMLMbvs` package into the R environment (See README for instructions), generate a simulated data set using the `simulate_DMLM()` function. 
 
 ```{r }
 data <- simulate_DMLM()
