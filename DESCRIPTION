@@ -3,8 +3,8 @@ Type: Package
 Title: DMLMbvs
 Version: 1.0.0
 Date: 2020-02-12
-Author: Matt Koslovsky
-Maintainer:  mkoslovsky12@gmail.com 
+Authors@R: person("Matt", "Koslovsky", email = "mkoslovsky12@gmail.com",
+                  role = c("aut", "cre"))
 Description: Performs Bayesian variable selection for multivariate count data to predict continuous response while simulataneously identifying factors associated with multivariate count data. Supporting documentation found in the published article "A Bayesian model of microbiome data for simultaneous identification of covariate associations and prediction of phenotypic outcomes"
 License: MIT + file LICENSE
 Imports: Rcpp (>= 0.12.16), RcppArmadillo (>= 0.8.600.0.0), ggplot2 (>= 2.2.1)
