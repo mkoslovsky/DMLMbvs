@@ -7,5 +7,10 @@ Authors@R: person("Matt", "Koslovsky", email = "mkoslovsky12@gmail.com", role = 
 Description: Performs Bayesian variable selection for multivariate count data to predict continuous response while simulataneously identifying factors associated with multivariate count data. Supporting documentation found in the published article "A Bayesian model of microbiome data for simultaneous identification of covariate associations and prediction of phenotypic outcomes"
 License: MIT + file LICENSE
 Imports: Rcpp (>= 0.12.16), RcppArmadillo (>= 0.8.600.0.0), ggplot2 (>= 2.2.1)
-Suggests: MCMCpack (>= 1.4-2), mvtnorm (>= 1.0-6)
+Suggests: 
+    MCMCpack (>= 1.4-2),
+    mvtnorm (>= 1.0-6),
+    knitr,
+    rmarkdown
 LinkingTo: Rcpp, RcppArmadillo 
+VignetteBuilder: knitr

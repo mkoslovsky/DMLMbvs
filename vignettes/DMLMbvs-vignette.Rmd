@@ -1,0 +1,23 @@
+---
+title: "DMLMbvs-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{DMLMbvs-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(DMLMbvs)
+```
+
+# Tutorial 
+Tutorial for the R package DMLMbvs, as described in ``A Bayesian model of microbiome data for simultaneous identification of covariate associations and prediction of phenotypic outcomes,'' by M.D. Koslovsky, K. Hoffman, C. Daniel-MacDougall, and M. Vannucci
+Having installed and loaded the package into the R environment, generate a simulated data set using the `simualate_DMLM()' function. 
