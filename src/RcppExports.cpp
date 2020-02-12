@@ -6,55 +6,115 @@
 
 using namespace Rcpp;
 
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _DMLMbvs_rcpparma_hello_world() {
+// dm_lm_bvs
+List dm_lm_bvs(int iterations, int thin, arma::mat alpha, arma::vec y, arma::mat z, arma::mat x, arma::cube phi, arma::cube psi, arma::mat temp_cc, arma::vec temp_uu, double sigma2_alpha, arma::cube zeta, arma::mat xi, double sigma2_phi, double a, double b, double a_0, double b_0, double h_alpha, double h_beta, double a_m, double b_m);
+RcppExport SEXP _DMLMbvs_dm_lm_bvs(SEXP iterationsSEXP, SEXP thinSEXP, SEXP alphaSEXP, SEXP ySEXP, SEXP zSEXP, SEXP xSEXP, SEXP phiSEXP, SEXP psiSEXP, SEXP temp_ccSEXP, SEXP temp_uuSEXP, SEXP sigma2_alphaSEXP, SEXP zetaSEXP, SEXP xiSEXP, SEXP sigma2_phiSEXP, SEXP aSEXP, SEXP bSEXP, SEXP a_0SEXP, SEXP b_0SEXP, SEXP h_alphaSEXP, SEXP h_betaSEXP, SEXP a_mSEXP, SEXP b_mSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
+    Rcpp::traits::input_parameter< int >::type iterations(iterationsSEXP);
+    Rcpp::traits::input_parameter< int >::type thin(thinSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type alpha(alphaSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type y(ySEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type z(zSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type x(xSEXP);
+    Rcpp::traits::input_parameter< arma::cube >::type phi(phiSEXP);
+    Rcpp::traits::input_parameter< arma::cube >::type psi(psiSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type temp_cc(temp_ccSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type temp_uu(temp_uuSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma2_alpha(sigma2_alphaSEXP);
+    Rcpp::traits::input_parameter< arma::cube >::type zeta(zetaSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type xi(xiSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma2_phi(sigma2_phiSEXP);
+    Rcpp::traits::input_parameter< double >::type a(aSEXP);
+    Rcpp::traits::input_parameter< double >::type b(bSEXP);
+    Rcpp::traits::input_parameter< double >::type a_0(a_0SEXP);
+    Rcpp::traits::input_parameter< double >::type b_0(b_0SEXP);
+    Rcpp::traits::input_parameter< double >::type h_alpha(h_alphaSEXP);
+    Rcpp::traits::input_parameter< double >::type h_beta(h_betaSEXP);
+    Rcpp::traits::input_parameter< double >::type a_m(a_mSEXP);
+    Rcpp::traits::input_parameter< double >::type b_m(b_mSEXP);
+    rcpp_result_gen = Rcpp::wrap(dm_lm_bvs(iterations, thin, alpha, y, z, x, phi, psi, temp_cc, temp_uu, sigma2_alpha, zeta, xi, sigma2_phi, a, b, a_0, b_0, h_alpha, h_beta, a_m, b_m));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _DMLMbvs_rcpparma_outerproduct(SEXP xSEXP) {
+// ilr_fun_cpp
+arma::mat ilr_fun_cpp(arma::mat x);
+RcppExport SEXP _DMLMbvs_ilr_fun_cpp(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
+    Rcpp::traits::input_parameter< arma::mat >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(ilr_fun_cpp(x));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _DMLMbvs_rcpparma_innerproduct(SEXP xSEXP) {
+// log_post
+arma::vec log_post(int iterations, arma::mat alpha, arma::vec y, arma::mat z, arma::mat x, arma::cube phi, arma::cube psi, double sigma2_alpha, arma::cube zeta, arma::mat xi, double sigma2_phi, double a, double b, double a_0, double b_0, double h_alpha, double h_beta, double a_m, double b_m);
+RcppExport SEXP _DMLMbvs_log_post(SEXP iterationsSEXP, SEXP alphaSEXP, SEXP ySEXP, SEXP zSEXP, SEXP xSEXP, SEXP phiSEXP, SEXP psiSEXP, SEXP sigma2_alphaSEXP, SEXP zetaSEXP, SEXP xiSEXP, SEXP sigma2_phiSEXP, SEXP aSEXP, SEXP bSEXP, SEXP a_0SEXP, SEXP b_0SEXP, SEXP h_alphaSEXP, SEXP h_betaSEXP, SEXP a_mSEXP, SEXP b_mSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
+    Rcpp::traits::input_parameter< int >::type iterations(iterationsSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type alpha(alphaSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type y(ySEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type z(zSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type x(xSEXP);
+    Rcpp::traits::input_parameter< arma::cube >::type phi(phiSEXP);
+    Rcpp::traits::input_parameter< arma::cube >::type psi(psiSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma2_alpha(sigma2_alphaSEXP);
+    Rcpp::traits::input_parameter< arma::cube >::type zeta(zetaSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type xi(xiSEXP);
+    Rcpp::traits::input_parameter< double >::type sigma2_phi(sigma2_phiSEXP);
+    Rcpp::traits::input_parameter< double >::type a(aSEXP);
+    Rcpp::traits::input_parameter< double >::type b(bSEXP);
+    Rcpp::traits::input_parameter< double >::type a_0(a_0SEXP);
+    Rcpp::traits::input_parameter< double >::type b_0(b_0SEXP);
+    Rcpp::traits::input_parameter< double >::type h_alpha(h_alphaSEXP);
+    Rcpp::traits::input_parameter< double >::type h_beta(h_betaSEXP);
+    Rcpp::traits::input_parameter< double >::type a_m(a_mSEXP);
+    Rcpp::traits::input_parameter< double >::type b_m(b_mSEXP);
+    rcpp_result_gen = Rcpp::wrap(log_post(iterations, alpha, y, z, x, phi, psi, sigma2_alpha, zeta, xi, sigma2_phi, a, b, a_0, b_0, h_alpha, h_beta, a_m, b_m));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _DMLMbvs_rcpparma_bothproducts(SEXP xSEXP) {
+// loo_prep
+arma::mat loo_prep(arma::vec y, arma::cube psi, arma::mat xi, double a_0, double b_0, double h_alpha, double h_beta);
+RcppExport SEXP _DMLMbvs_loo_prep(SEXP ySEXP, SEXP psiSEXP, SEXP xiSEXP, SEXP a_0SEXP, SEXP b_0SEXP, SEXP h_alphaSEXP, SEXP h_betaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    Rcpp::traits::input_parameter< arma::vec >::type y(ySEXP);
+    Rcpp::traits::input_parameter< arma::cube >::type psi(psiSEXP);
+    Rcpp::traits::input_parameter< arma::mat >::type xi(xiSEXP);
+    Rcpp::traits::input_parameter< double >::type a_0(a_0SEXP);
+    Rcpp::traits::input_parameter< double >::type b_0(b_0SEXP);
+    Rcpp::traits::input_parameter< double >::type h_alpha(h_alphaSEXP);
+    Rcpp::traits::input_parameter< double >::type h_beta(h_betaSEXP);
+    rcpp_result_gen = Rcpp::wrap(loo_prep(y, psi, xi, a_0, b_0, h_alpha, h_beta));
+    return rcpp_result_gen;
+END_RCPP
+}
+// log_zeta_pj_cpp
+double log_zeta_pj_cpp(double t_pj, double a, double b);
+RcppExport SEXP _DMLMbvs_log_zeta_pj_cpp(SEXP t_pjSEXP, SEXP aSEXP, SEXP bSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type t_pj(t_pjSEXP);
+    Rcpp::traits::input_parameter< double >::type a(aSEXP);
+    Rcpp::traits::input_parameter< double >::type b(bSEXP);
+    rcpp_result_gen = Rcpp::wrap(log_zeta_pj_cpp(t_pj, a, b));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_DMLMbvs_rcpparma_hello_world", (DL_FUNC) &_DMLMbvs_rcpparma_hello_world, 0},
-    {"_DMLMbvs_rcpparma_outerproduct", (DL_FUNC) &_DMLMbvs_rcpparma_outerproduct, 1},
-    {"_DMLMbvs_rcpparma_innerproduct", (DL_FUNC) &_DMLMbvs_rcpparma_innerproduct, 1},
-    {"_DMLMbvs_rcpparma_bothproducts", (DL_FUNC) &_DMLMbvs_rcpparma_bothproducts, 1},
+    {"_DMLMbvs_dm_lm_bvs", (DL_FUNC) &_DMLMbvs_dm_lm_bvs, 22},
+    {"_DMLMbvs_ilr_fun_cpp", (DL_FUNC) &_DMLMbvs_ilr_fun_cpp, 1},
+    {"_DMLMbvs_log_post", (DL_FUNC) &_DMLMbvs_log_post, 19},
+    {"_DMLMbvs_loo_prep", (DL_FUNC) &_DMLMbvs_loo_prep, 7},
+    {"_DMLMbvs_log_zeta_pj_cpp", (DL_FUNC) &_DMLMbvs_log_zeta_pj_cpp, 3},
     {NULL, NULL, 0}
 };
 
