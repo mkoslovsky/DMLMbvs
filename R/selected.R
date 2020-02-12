@@ -32,7 +32,7 @@ selected <- function( dmlm_obj = NULL, threshold = c(0.5, 0.5), plotting = FALSE
   zeta_means <- apply( dmlm_obj[[ 2 ]][ , , ( burnin + 1 ):len ],c( 1, 2), mean )
   xi_means <- apply( dmlm_obj[[ 5 ]][ , ( burnin + 1 ):len ], 1,mean )
   
-  selected_zeta <-  which( zeta_means >= threshold[ 1 ] )
+  selected_zeta <-  which( zeta_means >= threshold[ 1 ], arr.ind = T )
   selected_xi <-  which( xi_means >= threshold[ 2 ] )
   
   # Plots of number of selected indices and PPI

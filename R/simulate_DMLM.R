@@ -1,6 +1,6 @@
 # Code to simulate data for DMLMbvs model
 
-simulate_DMLM <- function( subject_sim = 50, B_sim = 150, covariates_sim = 50, active_cov = 10, covar = 0.4, seed = 1234 ){
+simulate_DMLM <- function( subject_sim = 50, B_sim = 50, covariates_sim = 50, active_cov = 10, covar = 0.4, seed = 111 ){
   
 # Call libraries  
 library(mvtnorm) 
