@@ -20,7 +20,7 @@ library(DMLMbvs)
 This document contains a tutorial for the R package DMLMbvs, as described in *A Bayesian model of microbiome data for simultaneous identification of covariate associations and prediction of phenotypic outcomes,* by M.D. Koslovsky, K. Hoffman, C. Daniel-MacDougall, and M. Vannucci. The code below can be used to replicate the simulation study and sensitivity analysis presented in the main manuscript. 
 
 # Simulate Data
-Having installed and loaded the `DMLMbvs` package into the R environment, generate a simulated data set using the `simualate_DMLM()` function. 
+Having installed and loaded the `DMLMbvs` package into the R environment, generate a simulated data set using the `simulate_DMLM()` function. 
 
 ```{r }
 data <- simulate_DMLM()
@@ -29,7 +29,7 @@ data <- simulate_DMLM()
 By default 50 subjects (`subject_sim = 50`) with 50 taxa (`B_sim = 50`) and 50 covariates (`covariates_sim = 50`) are simulated. Of these, 10 covariates (`active_cov = 10`) are associated with the taxa counts, and the first 10 balances are associated with the continous outcome. The covariates are simulated from a normal distribution with covariance set to 0.4 as default (`covar = 0.4`). Balances are constructed using sequential binary separation. 
 
 # Run model
-To run the model, simply imput the data to the `dm_lm_bvs_R()` command. 
+To run the model, simply imput the data to the `dm_lm_bvs_R()` function.  
 
 ```{r , message = FALSE, results = 'hide' }
 output <- dm_lm_bvs_R( y = data$Y, z = data$Z, x = data$X )
@@ -51,7 +51,7 @@ data$true_cov
 select$selected_xi
 ```
 
-For inference, the `selected` function can be used to generate plots of the MPPIs for both levels of the model as with as plots of the number of terms active in the model at each MCMC iteration. The latter can be used to help assess convergence of the model. To obtain these plots, simply run 
+For inference, the `selected()` function can be used to generate plots of the MPPIs for both levels of the model as well as plots for the number of terms active in the model at each MCMC iteration. The latter can be used to help assess convergence of the model. To obtain these plots, simply run 
 
 ```{r}
 select <- selected( output, burnin = 500, plotting = TRUE )

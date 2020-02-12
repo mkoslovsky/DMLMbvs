@@ -27,21 +27,13 @@ dm_lm_bvs_R()
   \item{sigma2_phi}{prior value for phi variance}
   \item{h_alpha}{prior variance for intercept term a_0}
   \item{h_beta}{prior variance for beta terms for balances}
-  \item{delta}{Dirichlet proposal scale parameter}
-  \item{rho}{Dirichlet proposal shift parameter}
   \item{a_m}{parameter for beta prior for balance inclusion probability}
   \item{b_m}{parameter for beta prior for balance inclusion probability}
   \item{a}{parameter for beta prior for covariate inclusion probability}
   \item{b}{parameter for beta prior for covariate inclusion probability}
   \item{a_0}{shape parameter for inverse-gamma prior for sigma}
   \item{b_0}{scale parameter for inverse-gamme prior for sigma }
-  \item{subject_sim}{number of subjects to simulate}
-  \item{B_sim}{number of compositional parts to simulate}
-  \item{covariates_sim}{number of covariates to simulate}
-  \item{covariance}{simulated covariance structure}
   \item{seed}{set random seed for simulated data }
-  \item{num_cov}{number of associated covariates across compostional parts}
-  \item{num_bal}{number of assocated balances }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -69,7 +61,8 @@ Matthew Koslovsky email: mkoslovsky12@gmail.com
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-run <- dm_lm_bvs_R()
+data <- simulate_DMLM()
+run <- dm_lm_bvs_R( y = data$Y, z = data$Z, x = data$X )
 output <- selected( run, plotting = TRUE )
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
