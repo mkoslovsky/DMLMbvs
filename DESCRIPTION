@@ -6,6 +6,6 @@ Date: 2020-02-12
 Author: Matt Koslovsky
 Maintainer: mkoslovsky12@gmail.com
 Description: More about what it does (maybe more than one line)
-License: What license is it under?
+License: MIT
 Imports: Rcpp (>= 1.0.3)
 LinkingTo: Rcpp, RcppArmadillo
